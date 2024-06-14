@@ -24,6 +24,17 @@
 
                 });
             });
+
+            const textContainer = document.getElementsByClassName('animated-text');
+            const text = textContainer.textContent;
+            textContainer.textContent = '';
+
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                span.style.animationDelay = `${i * 0.1}s`; // Adjust the delay as needed
+                textContainer.appendChild(span);
+            }
         });
     </script>
 </head>
@@ -36,30 +47,45 @@
     </div>
 
     <div class="container">
-        <div id="About" class="section">
-            <h2>Bishnu Bhattarai</h2>
-            <h4>Enjoy what I know and explore what I don't know</h4>
-            <p>Software engineer with good communication skills. Keen to learn new technologies but yes beyond this too [Interested in improving level of language always whether native or non-native]. Responsible programmer and believe in completing tasks within the specified deadline.</p>
-            <img class="circle-image" width="60%" height="80%" src="profile_bishnu.jpg" alt="Profile Image">
+        <div id="About" class="section background-image-opacity-about">
+            <div class="title-name animated-text typing-animation">Bishnu Bhattarai</div>
+            <div class="heading-quote">Enjoy what I know and explore what I don't know</div>
+            <p class="title-summary">Software engineer with good communication skills. Keen to learn new technologies but yes beyond this too [Interested in improving level of language always whether native or non-native]. Responsible programmer and believe in completing tasks within the specified deadline.</p>
         </div>
 
         <div id="Portfolio" class="section">
             <h2>Portfolio</h2>
             <div class="card">
                 <h3>SparrowSMS</h3>
-                <p>Description of Project 1.</p>
+                <p class="project-detail">In this product I worked as a python/django programmer in Janakitech
+                    Pvt. Ltd. since October 2014 to Aug 2019. In this project I
+                    am working to send bulk SMS, scheduled SMS and other sms related api
+                    services. Managing contacts and contact-groups of clients and using them
+                    in bulk-sms module.  I have also work on different module like autoresponder, result,
+                    voting. User sends sms to certain shortcode, our system receives the
+                    message and find the related campaign and sends response according to
+                    the campaign. I have also worked in bulk-email using sendgrid-api. <br/> <a href="https://web.sparrowsms.com" >Project link</a> </p>
             </div>
             <div class="card">
                 <h3>Talentadore</h3>
-                <p>Description of Project 2.</p>
+                <p class="project-detail">Talentadore is a virtual assistant recruitment (VRA) system developed in
+                    flask and MariaDB. I worked here as a senior developer to develop feature
+                    and fix the issues and bugs. The steps to recruit a new employee is
+                    completed managed by this product. All the candidates are get better reply
+                    from this web app.<br/> <a href="https://talentadore.com" >Project link</a> </p>
             </div>
             <div class="card">
                 <h3>RegistryDirect</h3>
-                <p>Description of Project 3.</p>
+                <p class="project-detail">RegistryDirect is a product where multiple shares of an organization are
+                    managed and maintained. I am working in this product in react.js and
+                    python/django technology as a full stack developer. I am working from
+                    Nepal as a remote developer. <br/> <a href="https://registrydirect.com.au" >Project link</a> </p>
             </div>
             <div class="card">
                 <h3>Sunya Health</h3>
-                <p>Description of Project 3.</p>
+                <p class="project-detail">This is a health product managing the data for different medical reports
+                    and patients’ history, this project is targeted only for Nepal. I have worked
+                    in front-end backend and deployment of this project. <br/> <a href="https://sunya.health" >Project link</a> </p>
             </div>
         </div>
 
@@ -91,9 +117,17 @@
                     <li>Linux Shell Scripting</li>
                 </ul></p>
             </div>
+            <div class="card">
+                <h3>Database (5 years)</h3>
+                <p><ul>
+                    <li>Mysql</li>
+                    <li>Postgresql</li>
+                    <li>Mongo</li>
+                </ul></p>
+            </div>
         </div>
 
-        <div id="Hobby" class="section">
+        <div id="Hobby" class="section background-image-opacity-hobby">
             <h2>Hobbies</h2>
             <div class="card">
                 <h3>Swimming</h3>
